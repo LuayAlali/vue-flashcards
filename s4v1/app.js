@@ -20,8 +20,16 @@ const cards = [
       back: 'Dr. Evelyn Boyd Granville',
       flipped: false,
     },
-  ]; 
+  ];
 
+//Display our data
+//  on Click: flip cards back and forth
+// get info for new cards from te user
+// Add new card when user hits enter or clicks button
+//  Delete cards
+// Animate card flip
+// Display an error message if form fields are blank
+ 
   new Vue({
     el: '#flashcard-app',
     data: {

@@ -25,11 +25,11 @@
     </div>
 
     <ul class="flashcard-list">
-      <li>
-        <p class="card">
+      <li v-for="card in cards">
+        <p class="card">{{card.front}}
             <span class="delete-card">X</span>
         </p>
-        <p class="card">
+        <p class="card">{{card.back}}
             <span class="delete-card">X</span>
         </p>
       </li>
