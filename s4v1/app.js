@@ -25,6 +25,7 @@ const cards = [
 //Display our data
 
 // get info for new cards from te user
+// create data properties for front and back
 // Add new card when user hits enter or clicks button
 //  Delete cards
 // Animate card flip
@@ -34,6 +35,8 @@ const cards = [
     el: '#flashcard-app',
     data: {
       cards: cards,
+     newFront: '',
+     newBack: ''
     },
     methods: {
       toggleCard: function(card){
