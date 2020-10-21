@@ -25,12 +25,9 @@ const cards = [
 //Display our data
 
 
-// Add new card when user hits enter or clicks button
-// create a method
-  // creates a new card object containnd new card infomartion
-  // push that card object in to the cards array
-//  Delete cards
-// Animate card flip
+
+
+
 // Display an error message if form fields are blank
 
   new Vue({
@@ -38,7 +35,8 @@ const cards = [
     data: {
       cards: cards,
      newFront: '',
-     newBack: ''
+     newBack: '',
+     error: false
     },
     methods: {
       toggleCard: function(card){
@@ -46,11 +44,19 @@ const cards = [
         
       },
       addNew: function(){
-        this.cards.push({
-          front: this.newFront,
-          back: this.newBack,
-          flipped: false
-        });
-      }
+        if(!this.newFront || !this.newBack){
+          this.error = true;
+        }else {
+          this.cards.push({
+            front: this.newFront,
+            back: this.newBack,
+            flipped: false
+          });
+        
+       this.newFront = '';
+       this.newBack = '';
+       this.error = false;
+        }
     }
-  });
+    }
+    });
