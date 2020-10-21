@@ -24,9 +24,11 @@ const cards = [
 
 //Display our data
 
-// get info for new cards from te user
-// create data properties for front and back
+
 // Add new card when user hits enter or clicks button
+// create a method
+  // creates a new card object containnd new card infomartion
+  // push that card object in to the cards array
 //  Delete cards
 // Animate card flip
 // Display an error message if form fields are blank
@@ -42,6 +44,13 @@ const cards = [
       toggleCard: function(card){
         card.flipped = !card.flipped;
         
+      },
+      addNew: function(){
+        this.cards.push({
+          front: this.newFront,
+          back: this.newBack,
+          flipped: false
+        });
       }
     }
   });
